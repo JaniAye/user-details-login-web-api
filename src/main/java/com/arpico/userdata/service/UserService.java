@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 public interface UserService {
     public String addUser(UserDTO dto);
-    PaginatedUserDTO searchUserById(String propertyId, int page, int size);
+    UserDTO searchUserById(String propertyId);
     public String updateUserData(UserDTO dto);
 
 

@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 
 @RestController
 @CrossOrigin
@@ -42,6 +43,24 @@ public class UserDetailsController {
                 HttpStatus.OK
         );
 
+    }
+
+    @GetMapping(
+            params = {"userId"})
+    public ResponseEntity<StandardResponse> searchUser(
+            @RequestParam(value = "userId") String userId
+
+    ) {
+
+        UserDTO userDTO = null;
+
+        userDTO = userService.searchUserById(userId);
+        LOGGER.info("Get By Id");
+
+
+        return new ResponseEntity<StandardResponse>(
+                new StandardResponse(200, "success", userDTO),
+                HttpStatus.OK);
     }
 
 }
