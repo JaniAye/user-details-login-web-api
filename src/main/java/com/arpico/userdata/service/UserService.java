@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 public interface UserService {
     public String addUser(UserDTO dto);
-    UserDTO searchUserById(String propertyId);
+    UserDTO searchUserById(String userName);
     public String updateUserData(UserDTO dto);
 
 

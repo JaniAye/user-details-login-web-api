@@ -18,12 +18,9 @@ import javax.validation.constraints.NotNull;
 public class User implements SuperEntity{
 
     @Id
-    @Column(name = "user_id",length = 20)
-    private String userId;
-
     @Column(nullable = false, length = 45,name = "user_name")
     @NotNull(message = "First user Name is mandatory")
-    private String userName;
+    private String username;
 
     @Column(nullable = false, length = 15,name = "password")
     @NotNull(message = "First password is mandatory")

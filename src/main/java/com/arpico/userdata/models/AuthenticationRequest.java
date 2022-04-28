@@ -1,4 +1,4 @@
-package com.arpico.userdata.dto;
+package com.arpico.userdata.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO implements SuperDTO {
-
-    private String username;
+public class AuthenticationRequest {
+  private String username;
     private String password;
-    private int mobile;
+
 }
