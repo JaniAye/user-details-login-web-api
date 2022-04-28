@@ -19,14 +19,22 @@ public class User implements SuperEntity{
 
     @Id
     @Column(nullable = false, length = 45,name = "user_name")
-    @NotNull(message = "First user Name is mandatory")
+    @NotNull(message = "user Name is mandatory")
     private String username;
 
-    @Column(nullable = false, length = 15,name = "password")
-    @NotNull(message = "First password is mandatory")
+    @Column(nullable = false, length = 25,name = "password")
+    @NotNull(message = " password is mandatory")
     private String password;
 
-    @Column(nullable = false, name = "mobile")
-    @NotNull(message = "First mobile is mandatory")
-    private int mobile;
+    @Column(nullable = false, length = 15,name = "nic")
+    @NotNull(message = "nic is mandatory")
+    public String nic;
+
+    @Column(nullable = false, length = 45,name = "first_name")
+    @NotNull(message = "first Name is mandatory")
+    public String firstName;
+
+    @Column(nullable = false, length = 45,name = "last_name")
+    @NotNull(message = "last Name is mandatory")
+    public String lastName;
 }

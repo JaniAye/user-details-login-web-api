@@ -11,5 +11,7 @@ public class UserDTO implements SuperDTO {
 
     private String username;
     private String password;
-    private int mobile;
+    public String nic;
+    public String firstName;
+    public String lastName;
 }
