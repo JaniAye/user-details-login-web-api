@@ -14,4 +14,5 @@ public class UserDTO implements SuperDTO {
     public String nic;
     public String firstName;
     public String lastName;
+
 }
